@@ -7,11 +7,10 @@
                   [appareilName]="appareil.name"
                   [appareilStatus]="appareil.status"
                   [id]="appareil.id"></app-appareil>
-
   </ul>
-  <button class="btn btn-success"
+  <button class="btn btn-success btn-block"
           [disabled]="!isAuth"
           (click)="onAllumer()">Tout allumer</button>
-  <button class="btn btn-danger"
+  <button class="btn btn-danger btn-block"
           (click)="onEteindre()">Tout Eteindre</button>
 </div>
