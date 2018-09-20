@@ -1,6 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 import {AppComponent} from './app.component';
 import {MonPremierComponent} from './mon-premier/mon-premier.component';
@@ -18,7 +19,6 @@ import {EditAppareilComponent} from './edit-appareil/edit-appareil.component';
 import {UserListComponent} from './user-list/user-list.component';
 import {User} from './models/user.model';
 import {UserServices} from './services/user.services';
-import {buildPath} from 'selenium-webdriver/http';
 import {NewUserComponent} from './new-user/new-user.component';
 
 const appRoutes: Routes = [
@@ -51,6 +51,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [

@@ -4,9 +4,11 @@
   <h4 [ngStyle]="{color: getColor()}">Appareil : {{ appareilName }} -- Statut : {{ getStatus() }}</h4>
   <div class="btn-group">
     <a class="btn btn-info" [routerLink]="[id]">Détails</a>
-  <button class="btn btn-success" (click)="onSwitchOn()"
-          [disabled]="appareilStatus === 'allumé'">Allumer</button>
-  <button class="btn btn-warning " (click)="onSwitchOff()"
-          [disabled]="appareilStatus === 'éteint'">Eteindre</button>
+    <button class="btn btn-success" (click)="onSwitchOn()"
+            [disabled]="appareilStatus === 'allumé'">Allumer
+    </button>
+    <button class="btn btn-danger" (click)="onSwitchOff()"
+            [disabled]="appareilStatus === 'éteint'">Eteindre
+    </button>
   </div>
 </li>

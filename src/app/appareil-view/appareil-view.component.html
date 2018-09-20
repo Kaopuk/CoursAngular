@@ -8,9 +8,15 @@
                   [appareilStatus]="appareil.status"
                   [id]="appareil.id"></app-appareil>
   </ul>
-  <button class="btn btn-success btn-block"
-          [disabled]="!isAuth"
-          (click)="onAllumer()">Tout allumer</button>
-  <button class="btn btn-danger btn-block"
-          (click)="onEteindre()">Tout Eteindre</button>
+  <div class="btn-group">
+    <button class="btn btn-success"
+            [disabled]="!isAuth"
+            (click)="onAllumer()">Tout allumer</button>
+    <button class="btn btn-danger"
+            (click)="onEteindre()">Tout éteindre</button>
+    <button class="btn btn-warning"
+            (click)="onSave()">Enregistrer</button>
+    <button class="btn btn-info"
+            (click)="onFetch()">Charger</button>
+  </div>
 </div>
